@@ -39,10 +39,10 @@ class Downloader
         if ($save) {
             $filename = __DIR__ . "/../data/{$music['name']}.mp3";
             file_put_contents($filename, file_get_contents($response->getBody()->getContents()));
+            return $filename;
         } else {
             return ['name' => $music['name'], 'mp3' => $response->getBody()->getContents()];
         }
-        return $filename;
     }
 
     /**
