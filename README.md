@@ -1,19 +1,19 @@
 ## 搜索歌曲，下载保存
 
-下载项目代码：
+#### 下载项目代码
 
 ```
 git clone git@github.com:helingfeng/download-mp3.git
 cd download-mp3
 ```
 
-安装依赖：
+#### 安装依赖
 
 ```
 composer install
 ```
 
-下载 mp3：
+#### 下载 MP3
 
 ```
 ./run.sh download:mp3 "星星点灯"
