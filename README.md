@@ -1,6 +1,10 @@
 ## 搜索歌曲，下载保存
 
-#### 下载项目代码
+#### 环境依赖
+
+php >= 7.0
+
+#### 拉取项目
 
 ```
 git clone git@github.com:helingfeng/download-mp3.git
