@@ -17,6 +17,6 @@ $downloader = new Downloader();
 $music = $downloader->downloadMusic($name, 0);
 
 header("Content-Type: audio/mpeg");
-header('Content-Disposition: attachment; filename="' . $music['name'] . '"');
+header('Content-Disposition: attachment; filename="' . $music['name'] . '.mp3"');
 echo file_get_contents($music['mp3']);
 exit();
