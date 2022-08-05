@@ -20,10 +20,10 @@ composer install
 
 #### 下载 MP3
 
+命令：./run.sh download:mp3 music_name
+
 ```
 ./run.sh download:mp3 "星星点灯"
 
 # 成功下载文件保存至：download-mp3/src/../data/星星点灯-《热血街舞团》第十期背景音乐.mp3
 ```
-
-![](./img.png)
