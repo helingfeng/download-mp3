@@ -19,7 +19,7 @@ class Downloader
         $this->httpClient = new Client($config);
     }
 
-    public function downloadMusic($kw)
+    public function downloadMusic($kw, $save = 1)
     {
         $result = $this->searchMusic($kw, 1, 1);
         if (empty($result['list'])) {
@@ -36,8 +36,12 @@ class Downloader
         if ($response->getStatusCode() != 200) {
             throw new \Exception($response->getBody()->getContents());
         }
-        $filename = __DIR__ . "/../data/{$music['name']}.mp3";
-        file_put_contents($filename, file_get_contents($response->getBody()->getContents()));
+        if ($save) {
+            $filename = __DIR__ . "/../data/{$music['name']}.mp3";
+            file_put_contents($filename, file_get_contents($response->getBody()->getContents()));
+        } else {
+            return ['name' => $music['name'], 'mp3' => $response->getBody()->getContents()];
+        }
         return $filename;
     }
 
